@@ -1,0 +1,52 @@
+[
+  {
+    "name": "레이 EV",
+    "price": "2,735",
+    "img": "Ray.png"
+  },
+  {
+    "name": "니로 EV",
+    "price": "5,114",
+    "img": "NiroEv.png"
+  },
+  {
+    "name": "니로 플러스",
+    "price": "4,600",
+    "img": "NiroPlus.png"
+  },
+  {
+    "name": "EV3",
+    "price": "4,208",
+    "img": "Ev3.png"
+  },
+  {
+    "name": "EV6",
+    "price": "5,540",
+    "img": "Ev6.png"
+  },
+  {
+    "name": "EV6 GT",
+    "price": "7,605",
+    "img": "Ev6Gt.png"
+  },
+  {
+    "name": "EV9",
+    "price": "7,728",
+    "img": "Ev9.png"
+  },
+  {
+    "name": "봉고 EV",
+    "price": "4,385",
+    "img": "BongoEv.png"
+  },
+  {
+    "name": "봉고3 EV 탑차/윙바디",
+    "price": "6,187",
+    "img": "Bongo3.png"
+  },
+  {
+    "name": "봉고3 EV 파워게이트",
+    "price": "4,807",
+    "img": "Bongo3Powergate.png"
+  }
+]

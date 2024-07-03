@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "root",
+    "password": "cntjddn2423!",
+    "database": "kia_clone",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
