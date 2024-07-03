@@ -6,6 +6,8 @@ const db = require("../models");
 const User = db.sequelize.models.User;
 
 const router = express.Router();
+const dotenv = require("dotenv");
+dotenv.config();
 
 // Register
 router.post("/register", async (req, res) => {
@@ -15,6 +17,7 @@ router.post("/register", async (req, res) => {
     const user = await User.create({ username, password: hashedPassword });
     res.status(201).json(user);
   } catch (err) {
+    console.error(err.message);
     res.status(500).json({ error: "Failed to register" });
   }
 });
@@ -27,15 +30,19 @@ router.post("/login", async (req, res) => {
     if (!user) {
       return res.status(401).json({ error: "Invalid credentials" });
     }
+
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
       return res.status(401).json({ error: "Invalid credentials" });
     }
-    const token = jwt.sign({ userId: user.id }, "your_jwt_secret", {
+    
+    const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, {
       expiresIn: "1h",
     });
+
     res.json({ token });
   } catch (err) {
+    console.error(err.message);
     res.status(500).json({ error: "Failed to login" });
   }
 });
